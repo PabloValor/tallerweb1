@@ -1,0 +1,5 @@
+package tallerweb.sangucheto.controladores;
+
+public class HomeController {
+
+}

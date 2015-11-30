@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.mvc.Controller"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+<fullyQualifiedTypeName name="tallerweb.sanguchetto.modelo.SanguchettoTest"/>
+<fullyQualifiedTypeName name="tallerweb.sangucheto.modelo.Sanguchetto"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
+<fullyQualifiedTypeName name="tallerweb.sangucheto.modelo.Ingrediente"/>
+</qualifiedTypeNameHistroy>

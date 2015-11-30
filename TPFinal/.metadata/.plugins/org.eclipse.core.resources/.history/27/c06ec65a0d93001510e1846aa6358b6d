@@ -1,0 +1,18 @@
+package tallerweb.sangucheto.controladores;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+import tallerweb.sangucheto.modelo.Sanguchetto;
+
+
+@Controller
+public class HomeController {
+	@RequestMapping("/test")
+	public ModelAndView Index() {
+		Sanguchetto sanguchetto = Sanguchetto.getInstance();
+		ModelAndView mav = new ModelAndView("test");
+		mav.addObject("modelo", sanguchetto)
+		return new mav;
+	}
+}
