@@ -10,24 +10,26 @@ import tallerweb.sangucheto.modelo.Sanguchetto;
 
 @Controller
 public class SanguchettoController {
+	
+	@RequestMapping("/agregarIngrediente")
+	public ModelAndView insertarIngrediente() {
+		return new ModelAndView("agregarIngrediente", "command", new Ingrediente());
+	}
+	
+	
+	
 	@RequestMapping("/home")
-	public ModelAndView Home() {
-		
-		Sanguchetto sanguchetto = Sanguchetto.getInstance();
-		
+	public ModelAndView Home() {		
+		Sanguchetto sanguchetto = Sanguchetto.getInstance();		
 		Ingrediente ingrediente1 = new Ingrediente();
-		ingrediente1.setNombre("Lechuga");
-		
+		ingrediente1.setNombre("Lechuga");		
 		Ingrediente ingrediente2 = new Ingrediente();
-		ingrediente2.setNombre("Tomate");
-		
+		ingrediente2.setNombre("Tomate");		
 		sanguchetto.agregarIngrediente(ingrediente1);
-		sanguchetto.agregarIngrediente(ingrediente2);
-		
-		ModelAndView mav = new ModelAndView("home");
-		
-		mav.addObject("model", sanguchetto.verIngredientes());
-		
+		sanguchetto.agregarIngrediente(ingrediente2);		
+		ModelAndView mav = new ModelAndView("home");		
+		mav.addObject("model", sanguchetto.verIngredientes());		
 		return mav;
 	}
+	
 }
