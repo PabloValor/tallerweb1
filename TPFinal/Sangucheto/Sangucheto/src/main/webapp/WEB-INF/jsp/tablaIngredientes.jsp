@@ -57,7 +57,28 @@
   </div>
 </nav>
 
-
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<h2>
+				Ingrediente - <small>Listado</small>
+			</h2>
+			<table class="table table-striped">
+				<tr>
+					<td>Nombre</td>
+					<td>Precio</td>
+				</tr>
+				<c:forEach items="${tabla}" var="ingrediente">
+					<tr>
+						<td>${ingrediente.nombre}</td>
+						<td>$ ${ingrediente.precio}</td>
+					</tr>
+				</c:forEach>
+			</table>
+			<a href="agregarIngrediente">Dar de Alta un Ingrediente</a>
+		</div>
+		<div class="col-md-2"></div>
+	</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="js/jquery-1.11.3.min.js"></script>
