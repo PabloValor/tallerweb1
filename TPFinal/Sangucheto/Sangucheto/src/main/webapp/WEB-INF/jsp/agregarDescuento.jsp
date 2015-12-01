@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -30,8 +31,10 @@
        otro elemento que se pueda ocultar al minimizar la barra -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Carrito <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><span
-							class="badge">${cantProductosAgregados}</span></a></li>
+      <li class="active"><a href="carrito">Carrito
+      <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+      <span	class="badge">${cantProductosAgregados}</span>
+      </a></li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
           Stock <b class="caret"></b>
@@ -51,6 +54,7 @@
           <li><a href="agregarIngrediente">Dar de Alta un Ingrediente</a></li>
         </ul>
       </li>
+      <li><a href="agregarAlCarrito">Agregar a Carrito</a></li>
     </ul>
   </div>
 </nav>

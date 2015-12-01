@@ -5,13 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sanguchetto</title>
-
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
-
 
 <nav class="navbar navbar-default" role="navigation">
   <!-- El logotipo y el icono que despliega el menú se agrupan
@@ -31,16 +28,19 @@
        otro elemento que se pueda ocultar al minimizar la barra -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Carrito <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
+      <li class="active"><a href="carrito">Carrito
+      <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+      <span	class="badge">${cantProductosAgregados}</span>
+      </a></li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
           Stock <b class="caret"></b>
         </a>
         <ul class="dropdown-menu">
-          <li><a href="#">Agregar Stock a Productos</a></li>          
-          <li><a href="#">Stock de Productos Existentes</a></li>
+          <li><a href="agregarStock">Agregar Stock a Productos</a></li>          
+          <li><a href="stockExistentes">Stock de Productos Existentes</a></li>
           <li class="divider"></li>
-          <li><a href="#">Eliminar Stock a Producto</a></li>
+          <li><a href="eliminarIngrediente">Eliminar Stock a Producto</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -49,19 +49,14 @@
         </a>
         <ul class="dropdown-menu">
           <li><a href="agregarIngrediente">Dar de Alta un Ingrediente</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Consultar Ingredientes</a></li>
         </ul>
       </li>
+      <li><a href="agregarAlCarrito">Agregar a Carrito</a></li>
     </ul>
   </div>
 </nav>
 
-
-
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="js/jquery-1.11.3.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
