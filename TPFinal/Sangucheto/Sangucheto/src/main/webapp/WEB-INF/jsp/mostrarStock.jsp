@@ -55,42 +55,32 @@
     </ul>
   </div>
 </nav>
-	<div class="row">
-		<div class="col-xs-6 col-md-4"></div>
-		<div class="col-xs-6 col-md-4">
+
+<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
 			<h2>
-				Ingrediente - <small>Alta</small>
+				Stock - <small>Consulta</small>
 			</h2>
+			<table class="table table-striped">
+				<tr>
+					<td>Nombre</td>
+					<td>Precio</td>
+					<td>Cantidad</td>
+				</tr>
+				<c:forEach items="${tabla}" var="producto">
+					<tr>
+						<td>${producto.key.nombre}</td>
+						<td>$ ${producto.key.precio}</td>
+						<td>${producto.value}</td>
+					</tr>
+				</c:forEach>
+			</table>
 		</div>
-		<div class="col-xs-6 col-md-4"></div>
+		<div class="col-md-2"></div>
 	</div>
 
-	<form action="insertarIngrediente" method="POST">
-		<div class="row">
-			<div class="col-xs-6 col-md-4"></div>
-			<div class="col-xs-6 col-md-4">
-				Nombre del Producto: <input type="text" name="nombre" id="nombre"
-					class="form-control"></input> Precio del Ingrediente: <input
-					type="text" name="precio" id="precio" class="form-control"></input>
-			</div>
-			<div class="col-xs-6 col-md-4"></div>
-
-		</div>
-
-		<div class="row">
-			<div class="col-xs-6 col-md-4"></div>
-			<div class="col-xs-6 col-md-4 text-center">
-				</br> <input class="btn btn-primary" type="submit" name="btnAceptar"
-					Value="Aceptar"></input>
-			</div>
-			<div class="col-xs-6 col-md-4"></div>
-		</div>
-	</form>
-
-
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="js/jquery-1.11.3.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

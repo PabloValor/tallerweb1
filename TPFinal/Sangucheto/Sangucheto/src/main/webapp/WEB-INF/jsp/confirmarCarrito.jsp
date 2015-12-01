@@ -55,42 +55,78 @@
     </ul>
   </div>
 </nav>
-	<div class="row">
-		<div class="col-xs-6 col-md-4"></div>
-		<div class="col-xs-6 col-md-4">
+
+<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<input type="image" width="50px"
+				src="<%=request.getContextPath()%>/img/carrito.png">
 			<h2>
-				Ingrediente - <small>Alta</small>
+				Carrito - <small>finalizar compra</small>
 			</h2>
+			<form action="confirmarCarrito" method="POST">
+				<table class="table table-striped">
+					<tr>
+						<td>Producto</td>
+						<td>Precio</td>
+
+					</tr>
+					<c:if test="${fn:length(tabla)>0}">
+						<c:forEach items="${tabla}" var="producto">
+							<tr>
+								<td>${producto.nombre}</td>
+								<td>$ ${producto.precio}</td>
+
+							</tr>
+						</c:forEach>
+					</c:if>
+					<c:if test="${fn:length(tabla)<1}">
+
+
+						<tr>
+							<td align="center" colspan="2" style="color: blue;">El
+								carrito se encuentra Vacio.</td>
+
+						</tr>
+					</c:if>
+					<tr class="info">
+						<td>Total a pagar:</td>
+						<td>$ ${total}</td>
+					</tr>
+				</table>
+				<button type="button" class="btn btn-primary" data-toggle="modal"
+					data-target="#myModal">Finalizar Compra</button>
+			</form>
 		</div>
-		<div class="col-xs-6 col-md-4"></div>
+		<div class="col-md-2"></div>
 	</div>
 
-	<form action="insertarIngrediente" method="POST">
-		<div class="row">
-			<div class="col-xs-6 col-md-4"></div>
-			<div class="col-xs-6 col-md-4">
-				Nombre del Producto: <input type="text" name="nombre" id="nombre"
-					class="form-control"></input> Precio del Ingrediente: <input
-					type="text" name="precio" id="precio" class="form-control"></input>
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">¿Realizar Compra?</h4>
+				</div>
+				<div class="modal-body">¿Esta usted seguro que desea realizar
+					la compra de los productos del carrito?</div>
+				<div class="modal-footer">
+					<form action="confirmarCompra" method="POST">
+						<input type="submit" class="btn btn-default"
+							value="Si, estoy seguro.">
+					</form>
+				</div>
 			</div>
-			<div class="col-xs-6 col-md-4"></div>
-
 		</div>
+	</div>
 
-		<div class="row">
-			<div class="col-xs-6 col-md-4"></div>
-			<div class="col-xs-6 col-md-4 text-center">
-				</br> <input class="btn btn-primary" type="submit" name="btnAceptar"
-					Value="Aceptar"></input>
-			</div>
-			<div class="col-xs-6 col-md-4"></div>
-		</div>
-	</form>
-
-
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="js/jquery-1.11.3.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

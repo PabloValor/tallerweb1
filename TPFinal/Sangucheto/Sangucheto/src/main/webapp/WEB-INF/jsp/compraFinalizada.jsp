@@ -1,6 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,42 +52,20 @@
     </ul>
   </div>
 </nav>
-	<div class="row">
-		<div class="col-xs-6 col-md-4"></div>
-		<div class="col-xs-6 col-md-4">
-			<h2>
-				Ingrediente - <small>Alta</small>
-			</h2>
+
+<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<div class="jumbotron">
+			<div class="centered"> 
+				<h1>Gracias por Elegirnos!</h1>
+				<p>Hasta Pronto!!</p></div>
+			</div>
 		</div>
-		<div class="col-xs-6 col-md-4"></div>
+		<div class="col-md-2"></div>
 	</div>
 
-	<form action="insertarIngrediente" method="POST">
-		<div class="row">
-			<div class="col-xs-6 col-md-4"></div>
-			<div class="col-xs-6 col-md-4">
-				Nombre del Producto: <input type="text" name="nombre" id="nombre"
-					class="form-control"></input> Precio del Ingrediente: <input
-					type="text" name="precio" id="precio" class="form-control"></input>
-			</div>
-			<div class="col-xs-6 col-md-4"></div>
-
-		</div>
-
-		<div class="row">
-			<div class="col-xs-6 col-md-4"></div>
-			<div class="col-xs-6 col-md-4 text-center">
-				</br> <input class="btn btn-primary" type="submit" name="btnAceptar"
-					Value="Aceptar"></input>
-			</div>
-			<div class="col-xs-6 col-md-4"></div>
-		</div>
-	</form>
-
-
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="js/jquery-1.11.3.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
