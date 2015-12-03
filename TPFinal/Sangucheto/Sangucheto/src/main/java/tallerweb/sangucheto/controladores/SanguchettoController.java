@@ -53,15 +53,29 @@ public class SanguchettoController {
 	public ModelAndView insertarIngrediente() {
 		return new ModelAndView("agregarIngrediente", "command", new Ingrediente());
 	}
+
 	
-	@RequestMapping(value = "/insertarIngrediente", method = RequestMethod.POST)
-	public String addProduct(
-			@ModelAttribute("command") Ingrediente ingredienteAgregar, ModelMap modelo) {
-		Stock tabla = Stock.getInstance();
-		tabla.agregarIngrediente(ingredienteAgregar);
-		modelo.put("tabla", tabla.listarIngredientesDisponibles());
-		return "tablaIngredientes";
-	}
+	//Ingredienes - Ingresar
+		@RequestMapping(value = "/insertarIngrediente", method = RequestMethod.POST)
+		public String addProduct(
+				@ModelAttribute("command") Ingrediente ingredienteAgregar, ModelMap modelo) {
+			Stock tabla = Stock.getInstance();
+			tabla.agregarIngrediente(ingredienteAgregar);
+			modelo.put("tabla", tabla.listarIngredientesDisponibles());
+			return "tablaIngredientes";
+		}	
+		
+		//(No pedido) Ingredientes - Consulta
+		@RequestMapping(value = "/consultarIngrediente")
+		public ModelAndView seeProduct() {
+			ModelMap modelo = new ModelMap();
+			Stock tabla = Stock.getInstance();
+			modelo.put("tabla", tabla.listarIngredientesDisponibles());
+			ModelAndView miVista = new ModelAndView();
+			miVista.addAllObjects(modelo);
+			miVista.setViewName("tablaIngredientes");
+			return miVista;
+		}	
 	
 	
 	@RequestMapping(value = "/stockExistentes")

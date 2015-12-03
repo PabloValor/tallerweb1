@@ -11,8 +11,6 @@
 <body>
 
 <nav class="navbar navbar-default" role="navigation">
-  <!-- El logotipo y el icono que despliega el menú se agrupan
-       para mostrarlos mejor en los dispositivos móviles -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse"
             data-target=".navbar-ex1-collapse">
@@ -28,19 +26,28 @@
        otro elemento que se pueda ocultar al minimizar la barra -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="carrito">Carrito
-      <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-      <span	class="badge">${cantProductosAgregados}</span>
-      </a></li>
+    
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          Carrito <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true">
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="agregarAlCarrito">Agregar</a></li>        
+          <li class="divider"></li>
+          <li><a href="carrito">Ver</a></li>          
+        </ul>
+      </li>
+      
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
           Stock <b class="caret"></b>
         </a>
         <ul class="dropdown-menu">
-          <li><a href="agregarStock">Agregar Stock a Productos</a></li>          
-          <li><a href="stockExistentes">Stock de Productos Existentes</a></li>
+          <li><a href="agregarStock">Alta</a></li>          
+          <li><a href="stockExistentes">Consulta</a></li>
           <li class="divider"></li>
-          <li><a href="eliminarIngrediente">Eliminar Stock a Producto</a></li>
+          <li><a href="eliminarIngrediente">Eliminar</a></li>
         </ul>
       </li>
       <li class="dropdown">
@@ -48,14 +55,14 @@
           Ingredientes <b class="caret"></b>
         </a>
         <ul class="dropdown-menu">
-          <li><a href="agregarIngrediente">Dar de Alta un Ingrediente</a></li>
+          <li><a href="agregarIngrediente">Alta</a></li>
+          <li class="divider"></li>
+          <li><a href="consultarIngrediente">Consulta</a></li>
         </ul>
-      </li>
-      <li><a href="agregarAlCarrito">Agregar a Carrito</a></li>
+      </li>      
     </ul>
   </div>
 </nav>
-
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </body>
