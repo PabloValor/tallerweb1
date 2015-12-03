@@ -19,9 +19,6 @@ public class Sanguchetto {
 		return instance;
 	}
 	
-	/**
-	 * Elimina todos los ingredientes del sanguchetto.<br>
-	 */
 	
 	public void vaciar() {
         ingredientes.clear();
@@ -40,7 +37,6 @@ public class Sanguchetto {
 	public List<Ingrediente> verIngredientes(){
 		return ingredientes;
 	}
-	
 
     public List<Ingrediente> verCondimentos(){
         // Implementar
