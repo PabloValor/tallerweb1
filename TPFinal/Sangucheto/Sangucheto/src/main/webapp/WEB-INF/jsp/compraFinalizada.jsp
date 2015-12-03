@@ -68,9 +68,8 @@
 		<div class="col-md-2"></div>
 		<div class="col-md-8">
 			<div class="jumbotron">
-			<div class="centered"> 
-				<h1>Gracias por Elegirnos!</h1>
-				<p>Hasta Pronto!!</p></div>
+			<div style="text-align:center;"> 
+				<h1>Gracias por su compra</h1>
 			</div>
 		</div>
 		<div class="col-md-2"></div>
