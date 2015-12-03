@@ -24,7 +24,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#">SANGUCHETTO</a>
+    <a class="navbar-brand" href="<c:url value="index.jsp"/>">SANGUCHETTO</a>
   </div>
  
   <!-- Agrupar los enlaces de navegación, los formularios y cualquier
