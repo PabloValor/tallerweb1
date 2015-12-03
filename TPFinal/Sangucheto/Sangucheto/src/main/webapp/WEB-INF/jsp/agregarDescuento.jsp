@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sanguchetto</title>
 <!-- Bootstrap -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-tema.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -88,7 +88,7 @@
 		</div>
 		<div class="col-md-2"></div>
 	</div>
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

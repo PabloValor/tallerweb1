@@ -1,10 +1,10 @@
-package org.apache.jsp;
+package org.apache.jsp.WEB_002dINF.jsp;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class agregarIngrediente_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -40,7 +40,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
 
     try {
-      response.setContentType("text/html");
+      response.setContentType("text/html; charset=ISO-8859-1");
       pageContext = _jspxFactory.getPageContext(this, request, response,
       			null, true, 8192, true);
       _jspx_page_context = pageContext;
@@ -50,6 +50,10 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out = pageContext.getOut();
       _jspx_out = out;
 
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html lang=\"en\">\r\n");
       out.write("<head>\r\n");
@@ -109,6 +113,47 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </ul>\r\n");
       out.write("  </div>\r\n");
       out.write("</nav>\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\t<div class=\"row\">\r\n");
+      out.write("\t\t<div class=\"col-xs-6 col-md-4\"></div>\r\n");
+      out.write("\t\t<div class=\"col-xs-6 col-md-4\">\r\n");
+      out.write("\t\t\t<h2>\r\n");
+      out.write("\t\t\t\tIngrediente - <small>Alta</small>\r\n");
+      out.write("\t\t\t</h2>\r\n");
+      out.write("\t\t</div>\r\n");
+      out.write("\t\t<div class=\"col-xs-6 col-md-4\"></div>\r\n");
+      out.write("\t</div>\r\n");
+      out.write("\t<form action=\"insertarIngrediente\" method=\"POST\">\r\n");
+      out.write("\t\t<div class=\"row\">\r\n");
+      out.write("\t\t\t<div class=\"col-xs-6 col-md-4\"></div>\r\n");
+      out.write("\t\t\t<div class=\"col-xs-6 col-md-4\">\r\n");
+      out.write("\t\t\t\tNombre: <input type=\"text\" name=\"nombre\" id=\"nombre\"\r\n");
+      out.write("\t\t\t\t\tclass=\"form-control\"></input> \r\n");
+      out.write("\t\t\t\tPrecio: <input\r\n");
+      out.write("\t\t\t\t\ttype=\"text\" name=\"precio\" id=\"precio\" class=\"form-control\"></input>\r\n");
+      out.write("\t\t\t\tTipo: \r\n");
+      out.write("                      <select class=\"form-control\" name=\"tipo\" id=\"tipo\">\r\n");
+      out.write("                          <option value=\"INGREDIENTE\">Ingrediente</option>\r\n");
+      out.write("                          <option value=\"CONDIMENTO\">Condimento</option>                                 \r\n");
+      out.write("                      </select> \r\n");
+      out.write("\t\t\t</div>\r\n");
+      out.write("\t\t\t\r\n");
+      out.write("\t\t\t<div class=\"col-xs-6 col-md-4\"></div>\r\n");
+      out.write("\r\n");
+      out.write("\t\t</div>\r\n");
+      out.write("\r\n");
+      out.write("\t\t<div class=\"row\">\r\n");
+      out.write("\t\t\t<div class=\"col-xs-6 col-md-4\"></div>\r\n");
+      out.write("\t\t\t<div class=\"col-xs-6 col-md-4 text-center\">\r\n");
+      out.write("\t\t\t\t</br> <input class=\"btn btn-primary\" type=\"submit\" name=\"btnAceptar\"\r\n");
+      out.write("\t\t\t\t\tValue=\"Aceptar\"></input>\r\n");
+      out.write("\t\t\t</div>\r\n");
+      out.write("\t\t\t<div class=\"col-xs-6 col-md-4\"></div>\r\n");
+      out.write("\t\t</div>\r\n");
+      out.write("\t</form>\r\n");
+      out.write("\r\n");
       out.write("\r\n");
       out.write("\t<script src=\"js/jquery-1.11.3.min.js\"></script>\r\n");
       out.write("\t<script src=\"js/bootstrap.min.js\"></script>\r\n");

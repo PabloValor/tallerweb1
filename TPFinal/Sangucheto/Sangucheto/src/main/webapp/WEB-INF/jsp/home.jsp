@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link href='<c:url value="/css/bootstrap.min.css"/>' rel="stylesheet">
+	<link href='<c:url value="/css/bootstrap-tema.min.css"/>' rel="stylesheet">
 </head>
 <body>
 	<h1>Home Sanguchetto!</h1>
