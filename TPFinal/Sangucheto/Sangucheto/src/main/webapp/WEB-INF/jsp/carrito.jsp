@@ -72,34 +72,27 @@
 <div class="row">
 		<div class="col-md-2"></div>
 		<div class="col-md-8">
-			<input type="image" width="50px"
-				src="<%=request.getContextPath()%>/img/carrito.png">
 			<h2>
-				Carrito - <small>Listado de productos agregados</small>
+				Carrito - <small>Ingredientes de su Sanguchetto hasta el momento</small>
 			</h2>
 			<form action="confirmarCarrito" method="POST">
 				<table class="table table-striped">
 					<tr>
 						<td>Producto</td>
 						<td>Precio</td>
-
 					</tr>
 					<c:if test="${fn:length(tabla)>0}">
 						<c:forEach items="${tabla}" var="producto">
 							<tr>
 								<td>${producto.nombre}</td>
 								<td>$ ${producto.precio}</td>
-
 							</tr>
 						</c:forEach>
 					</c:if>
 					<c:if test="${fn:length(tabla)<1}">
-
-
 						<tr>
 							<td align="center" colspan="2" style="color: blue;">El
-								carrito se encuentra Vacio.</td>
-
+Sanguche no tiene ingredientes a&uacute;n.</td>
 						</tr>
 					</c:if>
 					<tr class="info">
