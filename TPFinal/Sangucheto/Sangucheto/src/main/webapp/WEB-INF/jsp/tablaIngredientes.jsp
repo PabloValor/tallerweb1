@@ -69,11 +69,13 @@
 				<tr>
 					<td>Nombre</td>
 					<td>Precio</td>
+					<td>Tipo</td>
 				</tr>
 				<c:forEach items="${tabla}" var="ingrediente">
 					<tr>
 						<td>${ingrediente.nombre}</td>
 						<td>$ ${ingrediente.precio}</td>
+						<td>${ingrediente.tipo}</td>
 					</tr>
 				</c:forEach>
 			</table>
