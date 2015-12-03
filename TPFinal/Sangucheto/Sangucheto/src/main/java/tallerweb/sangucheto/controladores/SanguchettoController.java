@@ -76,7 +76,7 @@ public class SanguchettoController {
 
 	}
 
-	@RequestMapping("/eliminarIngredientes")
+	@RequestMapping("/eliminarIngrediente")
 	public ModelAndView eliminarIngrediente() {
 		return new ModelAndView("eliminarIngredientes", "command", new Ingrediente());
 	}
